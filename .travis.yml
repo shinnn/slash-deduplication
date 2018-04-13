@@ -1,0 +1,19 @@
+language: node_js
+node_js: node
+matrix:
+  include:
+  - addons:
+      chrome: beta
+    before_install:
+      - curl -sSLo chromedriver.zip https://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip
+      - unzip -q -d ~/bin chromedriver.zip
+  - addons:
+      firefox: latest
+    env: SELENIUM_BROWSER=firefox
+    before_install: curl -sSL https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-linux64.tar.gz | tar zxf - -C ~/bin
+  - os: osx
+    osx_image: xcode9.3
+    env: SELENIUM_BROWSER=safari
+    before_script: sudo safaridriver --enable
+branches:
+  except: /^v\d/

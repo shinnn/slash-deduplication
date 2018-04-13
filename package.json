@@ -1,0 +1,36 @@
+{
+	"name": "slash-deduplication",
+	"version": "0.1.0",
+	"description": "Deduplicate multiple consecutive slashes in a current URL",
+	"repository": "shinnn/slash-deduplication",
+	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
+	"scripts": {
+		"pretest": "eslint --fix --format=codeframe index.js test.js",
+		"test": "node test.js"
+	},
+	"license": "ISC",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"url",
+		"pathname",
+		"slash",
+		"dedupe",
+		"deduplicate",
+		"history",
+		"replace",
+		"redirect",
+		"browser",
+		"client-side"
+	],
+	"devDependencies": {
+		"@shinnn/eslint-config": "^5.4.0",
+		"eslint": "^4.19.1",
+		"selenium-webdriver": "^4.0.0-alpha.1",
+		"tape": "^4.9.0"
+	},
+	"eslintConfig": {
+		"extends": "@shinnn"
+	}
+}
