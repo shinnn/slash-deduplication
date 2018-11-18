@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/slash-deduplication.svg)](https://www.npmjs.com/package/slash-deduplication)
 [![Build Status](https://travis-ci.org/shinnn/slash-deduplication.svg?branch=master)](https://travis-ci.org/shinnn/slash-deduplication)
-[![Build status](https://ci.appveyor.com/api/projects/status/l4rkad954eljld39/branch/master?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/slash-deduplication/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/1ivou9ej9tu2obed/branch/master?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/slash-deduplication/branch/master)
 
 <img src="./screencast.gif" align="right" width="350" />
 

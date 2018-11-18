@@ -6,6 +6,7 @@ environment:
   SELENIUM_BROWSER: internet explorer
 install:
   - ps: Install-Product node Stable x64
-  - npm install
+  - npm ci
 build: off
+before_test: REG ADD "HKLM\SOFTWARE\Wow6432Node\Microsoft\Internet Explorer\MAIN\FeatureControl\FEATURE_BFCACHE" /v iexplore.exe /t REG_DWORD /d 00000000
 test_script: node test.js
