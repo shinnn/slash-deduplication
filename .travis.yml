@@ -1,3 +1,5 @@
+branches:
+  except: /^v\d/
 language: node_js
 node_js: node
 matrix:
@@ -13,8 +15,6 @@ matrix:
     - npm test
     - SELENIUM_BROWSER=firefox node test
   - os: osx
-    osx_image: xcode9.3
-    env: SELENIUM_BROWSER=safari
+    osx_image: xcode10.1
     before_script: sudo safaridriver --enable
-branches:
-  except: /^v\d/
+    script: SELENIUM_BROWSER=safari node test
