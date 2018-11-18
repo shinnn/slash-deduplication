@@ -3,14 +3,15 @@ node_js: node
 matrix:
   include:
   - addons:
-      chrome: beta
-    before_install:
-      - curl -sSLo chromedriver.zip https://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip
-      - unzip -q -d ~/bin chromedriver.zip
-  - addons:
+      chrome: stable
       firefox: latest
-    env: SELENIUM_BROWSER=firefox
-    before_install: curl -sSL https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-linux64.tar.gz | tar zxf - -C ~/bin
+    before_install:
+    - curl -sSLo chromedriver.zip https://chromedriver.storage.googleapis.com/2.43/chromedriver_linux64.zip
+    - unzip -q -d ~/bin chromedriver.zip
+    - curl -sSL https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz | tar zxf - -C ~/bin
+    script:
+    - npm test
+    - SELENIUM_BROWSER=firefox node test
   - os: osx
     osx_image: xcode9.3
     env: SELENIUM_BROWSER=safari
