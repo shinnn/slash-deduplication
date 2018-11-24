@@ -35,7 +35,7 @@ const promisifiedReadFile = promisify(readFile);
 	const [driver] = await Promise.all([
 		new Builder()
 		.forBrowser('chrome')
-		.setChromeOptions(new ChromeOptions().headless().addArguments(...process.env.TRAVIS ? ['--no-sandbox'] : []))
+		.setChromeOptions(new ChromeOptions().headless())
 		.setFirefoxOptions(new FirefoxOptions().headless())
 		.build(),
 		promisify(server.listen.bind(server))(3001)
