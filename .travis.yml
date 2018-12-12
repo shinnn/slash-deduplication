@@ -8,7 +8,7 @@ matrix:
       chrome: stable
       firefox: latest
     before_install:
-    - curl -sSLo chromedriver.zip https://chromedriver.storage.googleapis.com/2.44/chromedriver_linux64.zip
+    - curl -sSLo chromedriver.zip https://chromedriver.storage.googleapis.com/2.45/chromedriver_linux64.zip
     - unzip -q -d ~/bin chromedriver.zip
     - curl -sSL https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz | tar zxf - -C ~/bin
     script:
